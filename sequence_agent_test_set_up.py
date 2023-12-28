@@ -13,7 +13,8 @@
 # limitations under the License.
 """Tests for sequence_agent."""
 from typing import Type
-
+import sys
+sys.path.append('/home/nh_intern1')
 import numpy as np
 from robotics_transformer import sequence_agent
 from tensor2robot.utils import tensorspec_utils

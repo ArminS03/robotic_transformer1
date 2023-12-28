@@ -14,6 +14,8 @@
 """Tests for networks."""
 
 from absl.testing import parameterized
+import sys
+sys.path.append('/home/nh_intern1')
 
 from robotics_transformer import transformer_network
 from robotics_transformer.transformer_network_test_set_up import BATCH_SIZE

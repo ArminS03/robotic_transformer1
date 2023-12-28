@@ -13,6 +13,8 @@
 # limitations under the License.
 """Tests for image_tokenizer."""
 from absl.testing import parameterized
+import sys
+sys.path.append('/home/nh_intern1')
 from robotics_transformer.tokenizers import image_tokenizer
 import tensorflow as tf
 

@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Encoder based on Efficientnet."""
-
+import sys
+sys.path.append('/home/nh_intern1')
 from typing import Optional
 
 import gin

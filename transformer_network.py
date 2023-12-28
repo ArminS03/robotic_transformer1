@@ -16,6 +16,8 @@ from typing import Optional, Tuple, Union, Any
 
 from absl import logging
 import numpy as np
+import sys
+sys.path.append('/home/nh_intern1')
 
 from robotics_transformer import transformer
 from robotics_transformer.film_efficientnet import preprocessors
@@ -238,6 +240,7 @@ class TransformerNetwork(network.Network):
         context_image_tokens, action_tokens, batch_size)
 
     # run transformer
+    # print("in _transformer_call")
     output_tokens, self._attention_scores = self._transformer(
         input_token_sequence, training, attention_mask)
     return output_tokens
@@ -261,6 +264,7 @@ class TransformerNetwork(network.Network):
                                   slice_start: int = 0,
                                   slice_length: int = 1,
                                   **kwargs) -> Tuple[tf.Tensor, tf.Tensor]:
+    # print("in transformer_call_and_slice")
     output_tokens = self._transformer_call(*args, **kwargs)
 
     slice_end = slice_start + slice_length
@@ -402,6 +406,7 @@ class TransformerNetwork(network.Network):
 
     output_actions = self._action_tokenizer.detokenize(
         predicted_tokens_for_output)
+    # print("end of call method in transformer network!")
     return output_actions, network_state
 
   def add_summaries(self, observations: dict[str, tf.Tensor],

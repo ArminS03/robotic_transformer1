@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Tests for sequence_agent."""
+import sys
+sys.path.append('/home/nh_intern1')
 from robotics_transformer.sequence_agent_test_set_up import SequenceAgentTestSetUp
 import tensorflow as tf
 from tf_agents.agents import data_converter

@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Tests for pretrained_efficientnet_encoder."""
-
+import sys
+sys.path.append('/home/nh_intern1')
 import numpy as np
 from robotics_transformer.film_efficientnet import film_efficientnet_encoder
 from robotics_transformer.film_efficientnet import pretrained_efficientnet_encoder as eff

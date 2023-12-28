@@ -14,6 +14,8 @@
 """Tests for networks."""
 
 import copy
+import sys
+sys.path.append('//home/nh_intern1')
 from typing import Optional, Tuple, Union
 
 from absl.testing import parameterized
@@ -24,6 +26,14 @@ from tensor2robot.utils import tensorspec_utils
 import tensorflow as tf
 from tf_agents.specs import tensor_spec
 from tf_agents.trajectories import time_step as ts
+
+print(tf.sysconfig.get_build_info())
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+if len(physical_devices) > 0:
+    print("We got a GPU")
+    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+else:
+    print("Sorry, no GPU for you...")
 
 BATCH_SIZE = 2
 TIME_SEQUENCE_LENGTH = 3

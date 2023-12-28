@@ -14,6 +14,8 @@
 """A FiLM Efficientnet contextual image tokenizer used in Robotics Transformer 1.
 """
 from typing import Optional
+import sys
+sys.path.append('/home/nh_intern1')
 from robotics_transformer.film_efficientnet import pretrained_efficientnet_encoder
 from robotics_transformer.tokenizers import token_learner
 import tensorflow as tf

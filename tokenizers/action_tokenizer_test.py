@@ -13,6 +13,8 @@
 # limitations under the License.
 """Tests for action_tokenizer."""
 import numpy as np
+import sys
+sys.path.append('/home/nh_intern1')
 from robotics_transformer.tokenizers import action_tokenizer
 from tensor2robot.utils import tensorspec_utils
 import tensorflow as tf

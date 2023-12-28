@@ -4,6 +4,12 @@
 # Byte-compiled
 _pycache__/
 .cache/
+*0.1.0/
+*rt_1_x_tf_trained_for_002272480_step/
+*rt_1_x_tf_trained_for_002272480_step.zip
+*.run
+*.ipynb
+
 
 # Poetry, setuptools, PyPI distribution artifacts.
 /*.egg-info

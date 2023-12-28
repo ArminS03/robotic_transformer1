@@ -18,7 +18,8 @@
 
 Mostly copied from third_party/py/keras/applications/efficientnet.py
 """
-
+import sys
+sys.path.append('/home/nh_intern1')
 import copy
 import math
 import os
@@ -337,6 +338,8 @@ def EfficientNet(width_coefficient,
                  default_size,
                  dropout_rate=0.2,
                  drop_connect_rate=0.2,
+                 
+                 
                  depth_divisor=8,
                  activation='swish',
                  blocks_args='default',

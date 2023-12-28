@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Tests for film_conditioning_layer."""
+import sys
+sys.path.append('/home/nh_intern1')
 from absl.testing import parameterized
 import numpy as np
 from robotics_transformer.film_efficientnet import film_conditioning_layer
